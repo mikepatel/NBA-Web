@@ -8,6 +8,8 @@
 
 ## Part 1: Front End (Design)
 
-## Back End (Database)
+## Part 2: Back End (Database)
 
-## Workflow (Functionality)
+## Part 3: Workflow (Functionality)
+
+## Part 4: External API
