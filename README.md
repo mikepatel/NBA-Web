@@ -10,6 +10,6 @@
 
 ## Back End (Database)
 
-## Part 3: Workflow (Functionality)
+## Workflow (Functionality)
 
-## Part 4: External API
+## External API
