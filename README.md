@@ -8,7 +8,7 @@
 
 ## Part 1: Front End (Design)
 
-## Part 2: Back End (Database)
+## Back End (Database)
 
 ## Part 3: Workflow (Functionality)
 
