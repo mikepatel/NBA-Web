@@ -6,7 +6,7 @@
 ## Host
 [link to web app to be instered]()
 
-## Front End (Design)
+## Part 1: Front End (Design)
 
 ## Back End (Database)
 
