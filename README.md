@@ -35,8 +35,8 @@
   3. Custom events
 * Types of actions
   1. Account mangement
-    * log in/out
-    * sign up
+      * log in/out
+      * sign up
   2. Navigation
   3. Data --> actions that read/write data
   4. Payments
