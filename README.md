@@ -8,14 +8,6 @@
 
 ## Development
 ### Part 1: Front End (Design)
-
-### Part 2: Back End (Database)
-
-### Part 3: Workflow (Functionality)
-
-## External API
-
-## Notes
 * Bubble has 2 components
   1. Visual programming --> build web app
   2. Cloud platform --> host and run web app
@@ -31,3 +23,10 @@
       * checkbox
       * upload elements
 * Reusable elements --> create groups of elements
+
+### Part 2: Back End (Database)
+
+### Part 3: Workflow (Functionality)
+* Workflow = event that runs a series of actions when triggered
+
+## External API
