@@ -15,7 +15,7 @@
 * When creating a database, split larger items into separate data types in order to improve app speed (reduce the amount of content that needs to be rendered)
 * Bubble elements are positioned absolutely
 * Bubble pages are responsive
-* 3 types of Bubble elements
+* Types of Bubble elements
     1. UI elements (clickable interactions)
     2. Containers
     3. Input forms (enter information)
@@ -28,5 +28,19 @@
 
 ### Part 3: Workflow (Functionality)
 * Workflow = event that runs a series of actions when triggered
+* Multiple workflows stemming from the same event run independently
+* Types of events
+  1. Element events --> user interacts with an element
+  2. General events --> not related to a specific user action
+  3. Custom events
+* Types of actions
+  1. Account mangement
+    * log in/out
+    * sign up
+  2. Navigation
+  3. Data --> actions that read/write data
+  4. Payments
+  5. Plugins --> other services
+  6. Elements
 
 ## External API
