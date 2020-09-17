@@ -19,9 +19,9 @@
     1. UI elements (clickable interactions)
     2. Containers
     3. Input forms (enter information)
-      * text box
-      * checkbox
-      * upload elements
+        * text box
+        * checkbox
+        * upload elements
 * Reusable elements --> create groups of elements
 
 ### Part 2: Back End (Database)
