@@ -42,5 +42,8 @@
   4. Payments
   5. Plugins --> other services
   6. Elements
+* Conditionality
+  1. Events
+  2. Actions
 
 ## External API
