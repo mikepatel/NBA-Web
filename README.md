@@ -2,6 +2,9 @@
 ## Overview
 A simple web app
 
+## Dataset
+* Dataset courtesy of [Justinas Cirtautas](https://www.kaggle.com/datasets/justinas/nba-players-data)
+
 ## Instructions
 ### MongoDB server (over Docker)
 1. Start Docker Desktop
@@ -12,7 +15,7 @@ docker build -t <image name> <path to Dockerfile>
 
 2. Start MongoDB server
 ```
-docker run --name <container name> -p <host port>:<container port> -v <host file path>:/data/db <image name>
+docker run --name <container name> -p <host port>:<container port> -v <host volume file path>:/data/db <image name>
 ```
 
 3. Open MongoDB Compass
