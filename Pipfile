@@ -9,6 +9,7 @@ loguru = "*"
 pydantic = "*"
 pymongo = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+pandas = "*"
 
 [dev-packages]
 

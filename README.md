@@ -24,7 +24,7 @@ docker run --name <container name> -p <host port>:<container port> -v <host volu
 
 ### Web app
 #### Virtual environment
-1. Create a new virtual environment using pipenv
+1. Create a new virtual environment using pipenv (navigate to specific directory)
 ```
 pipenv --python 3
 ```

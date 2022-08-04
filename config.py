@@ -8,4 +8,7 @@ File description:
 
 """
 ################################################################################
+# Mongo
 HOST = "localhost:27017"
+DATABASE = "nba"
+COLLECTION = "players"
