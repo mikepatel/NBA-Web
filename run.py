@@ -49,7 +49,6 @@ async def get_player(first_name: str, last_name: str):
     results = collection.find(query, {"_id": False})
     df = pd.DataFrame(list(results))
     logger.info(f'{df}')
-    # return df.to_html()
     return HTMLResponse(content=df.to_html())
 
 
