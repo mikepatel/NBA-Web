@@ -11,6 +11,7 @@ File description:
 # Imports
 from datetime import datetime
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from loguru import logger
 import pandas as pd
 from pydantic import BaseModel
@@ -45,9 +46,11 @@ async def get_player(first_name: str, last_name: str):
     query = {
         "Player": f'{first_name} {last_name}'
     }
-    results = list(collection.find(query, {"_id": False}))
-    logger.info(f'{results}')
-    return f'{first_name} {last_name}'
+    results = collection.find(query, {"_id": False})
+    df = pd.DataFrame(list(results))
+    logger.info(f'{df}')
+    # return df.to_html()
+    return HTMLResponse(content=df.to_html())
 
 
 ################################################################################
