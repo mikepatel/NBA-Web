@@ -10,6 +10,8 @@ pydantic = "*"
 pymongo = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 pandas = "*"
+pytest = "*"
+requests = "*"
 
 [dev-packages]
 
