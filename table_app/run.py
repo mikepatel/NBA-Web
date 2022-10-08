@@ -66,12 +66,12 @@ async def get_player(first_name: str, last_name: str):
     )
 
     # plot data
-    plt.plot(p.seasons, p.points)
-    filename = "plot.png"
-    filepath = os.path.join(config.TMP_DIR, filename)
-    plt.savefig(filepath)
-    # return HTMLResponse(content=df.to_html())
-    return FileResponse(filepath)
+    # plt.plot(p.seasons, p.points)
+    # filename = "plot.png"
+    # filepath = os.path.join(config.TMP_DIR, filename)
+    # plt.savefig(filepath)
+    return HTMLResponse(content=df.to_html())
+    # return FileResponse(filepath)
 
 
 ################################################################################
