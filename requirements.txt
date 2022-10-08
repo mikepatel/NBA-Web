@@ -1,9 +1,0 @@
-fastapi
-loguru
-matplotlib
-pandas
-pydantic
-pymongo
-pytest
-requests
-uvicorn[standard]
