@@ -11,8 +11,10 @@ File description:
 # Imports
 from datetime import datetime
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, FileResponse
 from loguru import logger
+import matplotlib.pyplot as plt
+import os
 import pandas as pd
 from pydantic import BaseModel
 from pymongo import MongoClient
@@ -24,6 +26,13 @@ import config
 
 ################################################################################
 # Models
+class Player(BaseModel):
+    name: str
+    seasons: pd.Series
+    points: pd.Series
+
+    class Config:
+        arbitrary_types_allowed = True
 
 
 ################################################################################
@@ -48,8 +57,21 @@ async def get_player(first_name: str, last_name: str):
     }
     results = collection.find(query, {"_id": False})
     df = pd.DataFrame(list(results))
-    logger.info(f'{df}')
-    return HTMLResponse(content=df.to_html())
+    # logger.info(f'{df}')
+
+    p = Player(
+        name=f'{first_name} {last_name}',
+        seasons=df["Season"],
+        points=df["PTS"].astype(float)
+    )
+
+    # plot data
+    plt.plot(p.seasons, p.points)
+    filename = "plot.png"
+    filepath = os.path.join(config.TMP_DIR, filename)
+    plt.savefig(filepath)
+    # return HTMLResponse(content=df.to_html())
+    return FileResponse(filepath)
 
 
 ################################################################################

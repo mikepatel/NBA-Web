@@ -6,12 +6,13 @@ name = "pypi"
 [packages]
 fastapi = "*"
 loguru = "*"
+matplotlib = "*"
+pandas = "*"
 pydantic = "*"
 pymongo = "*"
-uvicorn = {extras = ["standard"], version = "*"}
-pandas = "*"
 pytest = "*"
 requests = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 

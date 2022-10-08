@@ -16,18 +16,13 @@ from run import app
 
 
 ################################################################################
-# Setup
-client = TestClient(app)
-
-
-################################################################################
 # Test cases
 def test_index():
-    response = client.get("/")
+    response = TestClient(app).get("/")
     assert response.status_code != 200
 
 
 def test_databases():
-    response = client.get("/databases")
+    response = TestClient(app).get("/databases")
     assert response.status_code == 200
     assert type(response.json()) == list
