@@ -42,5 +42,5 @@ pipenv install -r .\requirements.txt
 #### Start web app
 1. Start the server (in debug mode)
 ```
-
+python run.py
 ```

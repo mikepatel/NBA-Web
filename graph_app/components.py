@@ -10,8 +10,8 @@ File description:
 ################################################################################
 # Imports
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_table
+from dash import dcc
+from dash import dash_table
 
 
 ################################################################################
@@ -36,17 +36,17 @@ player_dropdown = dcc.Dropdown(
 player_table = dash_table.DataTable(
     id="player-table",
     style_as_list_view=True,
-    style_header={'backgroundColor': 'rgb(30, 30, 30)'},
-    style_cell={
-        'backgroundColor': 'rgb(50, 50, 50)',
-        'color': 'white'
-    }
+    # style_header={'backgroundColor': 'rgb(30, 30, 30)'},
+    # style_cell={
+    #     'backgroundColor': 'rgb(50, 50, 50)',
+    #     'color': 'white'
+    # }
 )
 
 
 ################################################################################
 # ----- Component: inputs ----- #
-inputs = dbc.FormGroup([
+inputs = dbc.Container([
     player_dropdown
 ])
 

@@ -13,6 +13,7 @@ from dash.dependencies import Input, Output
 
 # from other modules in project
 from app import app
+from db import get_data
 
 
 ################################################################################

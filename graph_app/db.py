@@ -9,9 +9,8 @@ File description:
 """
 ################################################################################
 # Imports
-# Imports
 import pandas as pd
-import pymongo
+from pymongo import MongoClient
 
 # from other modules in project
 import config
@@ -19,14 +18,6 @@ import config
 
 ################################################################################
 def get_data(player_name):
-    # connect to MongoDB instance
-    client = pymongo.MongoClient(config.URL)
-
-    # navigate to db, collection
-    db = client["nba"]
-    collection = db["players"]
-
-    # query
     fields_to_exclude = [
         "_id",
         "Unnamed: 0",
@@ -45,24 +36,24 @@ def get_data(player_name):
     ]
     fields_to_exclude = {field: 0 for field in fields_to_exclude}
 
-    query = {
-        #"draft_year": {
-        #    "$gte": "2015",
-        #    "$lte": "2019"
-        #}
-        "Player": player_name
-    }
-    results = collection.find(query, fields_to_exclude)
-    results = list(results)
+    with MongoClient(host=config.MONGO_HOST) as client:
+        db = client[config.DATABASE]
+        collection = db[config.COLLECTION]
 
-    # convert to dataframe
-    df = pd.DataFrame(results)
+        query = {
+            "Player": player_name
+        }
+        results = collection.find(query, fields_to_exclude)
+        results = list(results)
 
-    # move 'Season' column
-    season = df.pop("Season")
-    df.insert(0, "Season", season)
+        # convert to dataframe
+        df = pd.DataFrame(results)
 
-    # close connection
-    client.close()
+        # move 'Season' column
+        season = df.pop("Season")
+        df.insert(0, "Season", season)
 
-    return df
+        # close connection
+        client.close()
+
+        return df

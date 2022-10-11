@@ -13,10 +13,14 @@ import os
 
 
 ################################################################################
+# Application
+APP_TITLE = "NBA Web"
+DEBUG = True
+
 # Paths
 DATA_DIR = os.path.join(os.getcwd(), "data")
 
 # Mongo
-HOST = "localhost:27017"
+MONGO_HOST = "localhost:27017"
 DATABASE = "nba"
 COLLECTION = "players"

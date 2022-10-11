@@ -21,6 +21,6 @@ import config
 ################################################################################
 # Main
 if __name__ == "__main__":
-    app.title = "NBA Web"
+    app.title = config.APP_TITLE
     app.layout = index_layout
-    app.run_server(debug=True)
+    app.run_server(debug=config.DEBUG)
