@@ -1,3 +1,4 @@
 .idea
 Pipfile.lock
+graph_app/data/db
 table_app/data/db
