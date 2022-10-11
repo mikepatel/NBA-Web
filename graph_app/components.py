@@ -13,15 +13,13 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from dash import dash_table
 
+# from other modules in project
+import config
+
 
 ################################################################################
 # ----- Component: player-dropdown ----- #
-players = [
-    "LeBron James",
-    "Kevin Durant",
-    "Stephen Curry",
-    "Giannis Antetokounmpo"
-]
+players = config.PLAYERS
 player_options = [{"label": p, "value": p} for p in players]
 
 player_dropdown = dcc.Dropdown(

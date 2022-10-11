@@ -17,6 +17,13 @@ import os
 APP_TITLE = "NBA Web"
 DEBUG = True
 
+PLAYERS = [
+    "LeBron James",
+    "Kevin Durant",
+    "Stephen Curry",
+    "Giannis Antetokounmpo"
+]
+
 # Paths
 DATA_DIR = os.path.join(os.getcwd(), "data")
 
